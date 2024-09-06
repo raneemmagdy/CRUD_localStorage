@@ -1,0 +1,67 @@
+body{
+    font-family: "Roboto Slab", serif;
+}
+:root{
+    --main-color:#7161ef;
+    --section-color:#eef0eb;
+  
+}
+#Operations{
+    padding-block: 80px;
+    
+    background-color: var(--section-color);
+}
+#header{
+    background-image:linear-gradient(rgba(0,0,0,0.5) 0% 100%), url('../images/head.png');
+    background-size:cover ;
+    background-position: center;
+    color: white;
+}
+#header h1{
+    letter-spacing: 30px;
+    font-size: 100px;
+}
+#header .all p{
+   margin-inline:30px;
+}
+#header .icons i{
+    margin: 10px 40px ;
+    cursor: pointer;
+    font-size: 30px;
+    transition: 1s color ease;
+}
+#header .icons i:hover{
+    color: var(--main-color);
+}
+
+#header .icon{
+    position: absolute;
+    bottom: 50px;
+    animation: move 1s ease infinite;
+    font-size: 30px;
+
+}
+@keyframes move {
+    0%{
+        bottom: 50px;
+        opacity: 0;
+    }
+    100%{
+        bottom: 0;
+        opacity: 1;
+    }
+    
+}
+.button{
+    border: 1px solid #000;
+    background-color: #000;
+    border-radius: 50px;
+    padding: 10px;
+    color: #fff;
+    transition: 1s background-color ease ,1s border-color ease;
+}
+button:hover{
+    background-color: var(--main-color);
+    border-color: #fff;
+   
+}
