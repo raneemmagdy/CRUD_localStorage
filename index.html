@@ -59,8 +59,10 @@
             type="text"
             id="productNameInput"
             name="productName"
-            class="form-control"
+            class="form-control "
+            oninput="validationName()"
           />
+          <div class="alert alert-danger my-2 d-none" id="alertName">start with one uppercase letter followed by 3 to 10 lowercase letters.</div>
         </div>
         <div>
           <label for="productPriceInput">Product Price</label>
@@ -69,7 +71,9 @@
             id="productPriceInput"
             name="productPrice"
             class="form-control"
+            oninput="validationPrice()"
           />
+          <div class="alert alert-danger my-2 d-none" id="alertPrice">Please enter a number between 1 and 10,000,000. This includes any whole number from 1 up to 10,000,000</div>
         </div>
         <div>
           <label for="productCategoryInput">Product Category</label>
@@ -78,7 +82,9 @@
             id="productCategoryInput"
             name="productCategory"
             class="form-control"
+            oninput="validationCategory()"
           />
+          <div class="alert alert-danger my-2 d-none" id="alertCategory">start with one uppercase letter followed by 3 to 20 lowercase letters.</div>
         </div>
         <div>
           <label for="productDescriptionInput">Product Description</label>
@@ -86,7 +92,10 @@
             id="productDescriptionInput"
             name="productDescription"
             class="form-control"
+            oninput="validationDescription()"
           ></textarea>
+          <div class="alert alert-danger my-2 d-none" id="alertDescription">Please enter 3 to 100  letters.</div>
+
         </div>
         <button onclick="AddProduct()" class="mt-3 button" id="addBtn">Add Product</button>
         <button onclick="updateProduct()" class="mt-3 button d-none" id="updateBtn">Update Product</button>
@@ -97,6 +106,7 @@
           placeholder="Search By Name...."
          oninput="search()"
          id="searchInput"
+
         />
         <table class="table mt-5 text-center">
           <thead>
